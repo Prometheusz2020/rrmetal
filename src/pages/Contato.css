@@ -1,0 +1,202 @@
+.contato-header {
+  background: linear-gradient(135deg, #0f172a 0%, var(--accent) 150%);
+}
+
+.text-2xl {
+  font-size: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.contact-icon-wrapper {
+  background-color: var(--surface-hover);
+  color: var(--accent);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon-wrapper {
+  background-color: var(--accent);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.contact-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+/* WhatsApp Cards */
+.whatsapp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.whatsapp-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(to right, #25D366, #128C7E);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+  color: white;
+}
+
+.wa-icon {
+  background: rgba(255,255,255,0.2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wa-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.wa-info p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Form Styles */
+.glass-card {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-card {
+    background-color: var(--surface);
+    border-color: rgba(255,255,255,0.05);
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1.25rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-muted);
+  background-color: var(--background);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Map Section */
+.map-section {
+  width: 100%;
+  height: 400px;
+  background-color: var(--surface-hover);
+  position: relative;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(45deg, var(--surface) 25%, transparent 25%, transparent 75%, var(--surface) 75%, var(--surface)), repeating-linear-gradient(45deg, var(--surface) 25%, var(--background) 25%, var(--background) 75%, var(--surface) 75%, var(--surface));
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.map-overlay {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.map-pin-icon {
+  color: var(--accent);
+  margin: 0 auto 1rem auto;
+}

@@ -1,0 +1,140 @@
+.sobre-header {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-large {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.title-underline-left {
+  height: 4px;
+  width: 80px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.shadow-lg {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.about-image-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 1rem;
+  transform: translate(20px, 20px);
+  z-index: 1;
+  opacity: 0.2;
+}
+
+/* Identity Cards */
+.identity-card {
+  background-color: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: all 0.4s ease;
+  border-top: 4px solid transparent;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .identity-card {
+    background-color: var(--surface);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+}
+
+.identity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-top-color: var(--accent);
+}
+
+.identity-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--surface-hover);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  transition: all 0.4s ease;
+}
+
+.identity-card:hover .identity-icon-wrapper {
+  background-color: var(--accent);
+  color: #000;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.identity-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.identity-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.valores-list {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.valores-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.valores-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}

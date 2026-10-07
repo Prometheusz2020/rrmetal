@@ -1,0 +1,130 @@
+.page {
+  min-height: calc(100vh - 80px);
+}
+
+.page-header {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: var(--background);
+  transform: skewY(-2deg);
+}
+
+.text-white {
+  color: white !important;
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.servico-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .servico-card {
+    background-color: var(--background);
+    border-color: rgba(255,255,255,0.05);
+  }
+}
+
+.servico-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.servico-card:hover::before {
+  transform: scaleX(1);
+}
+
+.servico-icon {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  background: var(--surface-hover);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+
+.servico-card:hover .servico-icon {
+  background: var(--accent);
+  color: #000;
+}
+
+.servico-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.servico-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.servico-footer {
+  margin-top: auto;
+}
+
+.servico-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.servico-link:hover {
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .servico-link:hover {
+    color: var(--white);
+  }
+}

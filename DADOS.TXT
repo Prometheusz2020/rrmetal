@@ -1,0 +1,39 @@
+
+preciso construir um site para uma empresa que fabrica e monta estrutura metalica
+nome da empresa: RRMETAL    
+ as paginas precisam ser: Home, Serviços, Portfólio, Sobre Nós, Contato,
+
+ a empresa fica em mococa sao paulo, mas atende todo o brasil, de preferencia que seja bem bonito e moderno
+como o logo tem fundo branco dele ele em cima com fundo branco tambem, e construa um site completo por hora com informações 
+que voce sabe sobre estruturas metalicas e deixe cards no portifolio para eu colocar alguns serviços executados lembrando que esses 
+serviços podem ser em videos e imagens, coloque 4 imagens e 4 videos, os videos no tamanho 480x640, por hora nao coloque muitas informações
+  os videos serao apenas thumbnails com um botão de play para assistir no youtube, já as imagens pode ser qualquer coisa do tamanho que quiser
+  no rodapé coloque os logos de redes sociais do tipo: facebook, instagram, tiktok, linkedin, whatsapp
+  no rodapé coloque também as informações:  
+
+RRMETAL - Soluções em Estruturas Metálicas
+© 2026 Todos os direitos reservados. | CNPJ: 55.555.555/0001-55
+
+(16) 99999-9999 | [EMAIL_ADDRESS]
+Mococa, São Paulo - Brasil  
+ nos contatos deixe cards de whatsapp para contato direto tambem e nao esqueca da versão para celular
+ por hora coloque imagens da internet pra ajudar a montar um site moderno futuramente voupassar pelo github hospedar na vercel
+ja crie um esboço bem estruturado com estilos separados e componentes bons
+
+
+
+Slogan
+
+“Estruturas que sustentam grandes projetos.”
+
+Missão
+
+Oferecer soluções em estruturas metálicas com qualidade, segurança e precisão, cumprindo prazos e atendendo às necessidades de cada cliente, construindo parcerias duradouras e entregando serviços confiáveis e eficientes.
+
+Visão
+
+Ser reconhecida como uma empresa de referência em fabricação e montagem de estruturas metálicas, destacando-se pela qualidade, compromisso, segurança e confiança dos nossos clientes e parceiros.
+
+Valores
+
+Qualidade em cada etapa do trabalho. Compromisso com nossos clientes. Segurança para nossa equipe e para nossos parceiros. Cumprimento de prazos. Honestidade e transparência. Responsabilidade e respeito. Busca constante por melhoria e excelência.
