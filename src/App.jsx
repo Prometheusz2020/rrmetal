@@ -6,6 +6,7 @@ import Servicos from './pages/Servicos';
 import Portfolio from './pages/Portfolio';
 import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
+import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
