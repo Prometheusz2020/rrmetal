@@ -1,7 +1,11 @@
-import { Play } from 'lucide-react';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { Play, X } from 'lucide-react';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  const [activeVideo, setActiveVideo] = useState(null);
+
   const images = [
     { id: 1, src: "/imgs/projeto-1.jpeg", alt: "Estrutura Metálica 1" },
     { id: 2, src: "/imgs/projeto-2.jpeg", alt: "Solda Industrial" },
@@ -14,10 +18,11 @@ const Portfolio = () => {
   ];
 
   const videos = [
-    { id: 1, thumb: "/imgs/projeto-9.jpeg", title: "Montagem de Galpão" },
-    { id: 2, thumb: "/imgs/projeto-10.jpeg", title: "Processo de Soldagem" },
-    { id: 3, thumb: "/imgs/projeto-11.jpeg", title: "Estrutura de Grande Porte" },
-    { id: 4, thumb: "/imgs/projeto-12.jpeg", title: "Finalização de Obra" }
+    { id: 1, thumb: "/imgs/projeto-9.jpeg", src: "/videos/video-1.mp4", title: "Montagem de Galpão" },
+    { id: 2, thumb: "/imgs/projeto-10.jpeg", src: "/videos/video-2.mp4", title: "Processo de Soldagem" },
+    { id: 3, thumb: "/imgs/projeto-11.jpeg", src: "/videos/video-3.mp4", title: "Estrutura de Grande Porte" },
+    { id: 4, thumb: "/imgs/projeto-12.jpeg", src: "/videos/video-4.mp4", title: "Finalização de Obra" },
+    { id: 5, thumb: "/imgs/projeto-13.jpeg", src: "/videos/video-5.mp4", title: "Detalhes do Projeto" }
   ];
 
   return (
@@ -62,7 +67,7 @@ const Portfolio = () => {
           <div className="video-grid">
             {videos.map((vid, index) => (
               <div key={vid.id} className={`portfolio-item video-card delay-${(index % 4) * 100}`}>
-                <div className="video-thumb-wrapper">
+                <div className="video-thumb-wrapper" onClick={() => setActiveVideo(vid)} style={{ cursor: 'pointer' }}>
                   <img src={vid.thumb} alt={vid.title} className="video-thumb" loading="lazy" />
                   <div className="play-button-overlay">
                     <button className="play-btn" aria-label="Play video">
@@ -78,6 +83,22 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Modal */}
+      {activeVideo && createPortal(
+        <div className="video-modal-overlay" onClick={() => setActiveVideo(null)}>
+          <div className="video-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={() => setActiveVideo(null)} aria-label="Close video">
+              <X size={24} />
+            </button>
+            <video src={activeVideo.src} controls autoPlay className="modal-video-player"></video>
+            <div className="modal-video-title">
+              <h3>{activeVideo.title}</h3>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </div>
   );
 };
