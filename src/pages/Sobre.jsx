@@ -28,7 +28,7 @@ const Sobre = () => {
               </p>
             </div>
             <div className="about-image-wrapper">
-              <img src="/hero.png" alt="Equipe RRMETAL" className="about-image shadow-lg" loading="lazy" />
+              <img src="/imgs/projeto-13.jpeg" alt="Equipe RRMETAL" className="about-image shadow-lg" loading="lazy" />
               <div className="about-image-accent"></div>
             </div>
           </div>

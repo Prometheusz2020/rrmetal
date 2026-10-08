@@ -3,17 +3,21 @@ import './Portfolio.css';
 
 const Portfolio = () => {
   const images = [
-    { id: 1, src: "/hero.png", alt: "Estrutura Metálica 1" },
-    { id: 2, src: "/port1.png", alt: "Solda Industrial" },
-    { id: 3, src: "/port2.png", alt: "Galpão Metálico" },
-    { id: 4, src: "/hero.png", alt: "Estrutura Metálica 2" }
+    { id: 1, src: "/imgs/projeto-1.jpeg", alt: "Estrutura Metálica 1" },
+    { id: 2, src: "/imgs/projeto-2.jpeg", alt: "Solda Industrial" },
+    { id: 3, src: "/imgs/projeto-3.jpeg", alt: "Galpão Metálico" },
+    { id: 4, src: "/imgs/projeto-4.jpeg", alt: "Estrutura Metálica 2" },
+    { id: 5, src: "/imgs/projeto-5.jpeg", alt: "Projeto Especial" },
+    { id: 6, src: "/imgs/projeto-6.jpeg", alt: "Montagem Industrial" },
+    { id: 7, src: "/imgs/projeto-7.jpeg", alt: "Reforço Estrutural" },
+    { id: 8, src: "/imgs/projeto-8.jpeg", alt: "Galpão Metálico 2" }
   ];
 
   const videos = [
-    { id: 1, thumb: "/port2.png", title: "Montagem de Galpão" },
-    { id: 2, thumb: "/port1.png", title: "Processo de Soldagem" },
-    { id: 3, thumb: "/hero.png", title: "Estrutura de Grande Porte" },
-    { id: 4, thumb: "/port2.png", title: "Finalização de Obra" }
+    { id: 1, thumb: "/imgs/projeto-9.jpeg", title: "Montagem de Galpão" },
+    { id: 2, thumb: "/imgs/projeto-10.jpeg", title: "Processo de Soldagem" },
+    { id: 3, thumb: "/imgs/projeto-11.jpeg", title: "Estrutura de Grande Porte" },
+    { id: 4, thumb: "/imgs/projeto-12.jpeg", title: "Finalização de Obra" }
   ];
 
   return (
