@@ -1,11 +1,19 @@
+import { useEffect, useRef, useState } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Send } from 'lucide-react';
 import './Contato.css';
 
 const Contato = () => {
+  const [feedback, setFeedback] = useState(null);
+  const feedbackTimeout = useRef(null);
+
+  useEffect(() => () => window.clearTimeout(feedbackTimeout.current), []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.currentTarget;
+    window.clearTimeout(feedbackTimeout.current);
+    setFeedback(null);
     const payload = {
       name: document.getElementById('name')?.value,
       email: document.getElementById('email')?.value,
@@ -29,10 +37,17 @@ const Contato = () => {
         throw new Error(result.message || 'Erro ao enviar mensagem.');
       }
 
-      alert(result.message || 'Mensagem enviada com sucesso!');
+      setFeedback({
+        type: 'success',
+        message: result.message || 'Mensagem enviada com sucesso!',
+      });
       form.reset();
+      feedbackTimeout.current = window.setTimeout(() => setFeedback(null), 3000);
     } catch (error) {
-      alert(error.message || 'Não foi possível enviar a mensagem.');
+      setFeedback({
+        type: 'error',
+        message: error.message || 'Não foi possível enviar a mensagem.',
+      });
     }
   };
 
@@ -114,6 +129,15 @@ const Contato = () => {
             <div className="contact-form-container glass-card">
               <h2 className="text-2xl font-bold mb-6">Envie uma Mensagem</h2>
               <form className="contact-form" onSubmit={handleSubmit}>
+                {feedback && (
+                  <div
+                    className={`form-feedback form-feedback-${feedback.type}`}
+                    role={feedback.type === 'error' ? 'alert' : 'status'}
+                    aria-live={feedback.type === 'error' ? 'assertive' : 'polite'}
+                  >
+                    {feedback.message}
+                  </div>
+                )}
                 <div className="form-group">
                   <label htmlFor="name">Nome Completo</label>
                   <input type="text" id="name" placeholder="Seu nome" required />

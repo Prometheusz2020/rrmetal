@@ -124,6 +124,24 @@
   gap: 1.25rem;
 }
 
+.form-feedback {
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.form-feedback-success {
+  color: #166534;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+.form-feedback-error {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
