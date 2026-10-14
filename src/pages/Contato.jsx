@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Send } from 'lucide-react';
 import './Contato.css';
 
+const commercialMessage = 'Olá! Gostaria de solicitar um orçamento para um projeto de estrutura metálica.';
+const engineeringMessage = 'Olá! Gostaria de conversar com a equipe de Engenharia sobre um projeto de estrutura metálica.';
+
 const Contato = () => {
   const [feedback, setFeedback] = useState(null);
   const feedbackTimeout = useRef(null);
@@ -102,7 +105,12 @@ const Contato = () => {
               <div>
                 <h2 className="text-2xl font-bold mb-6">Atendimento Direto</h2>
                 <div className="whatsapp-cards">
-                  <a href="https://wa.me/5519995476078" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={`https://wa.me/5519995476078?text=${encodeURIComponent(commercialMessage)}`}
+                    className="whatsapp-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="wa-icon">
                       <MessageCircle size={32} />
                     </div>
@@ -112,7 +120,12 @@ const Contato = () => {
                     </div>
                   </a>
 
-                  <a href="https://wa.me/5519992495419" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={`https://wa.me/5519992495419?text=${encodeURIComponent(engineeringMessage)}`}
+                    className="whatsapp-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="wa-icon">
                       <MessageCircle size={32} />
                     </div>
