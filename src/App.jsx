@@ -12,9 +12,9 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="app-wrapper" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="app-wrapper">
         <Navbar />
-        <main style={{ flex: 1, paddingTop: '70px' }}>
+        <main className="app-main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servicos" element={<Servicos />} />

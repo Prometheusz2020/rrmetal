@@ -61,6 +61,11 @@
   flex-wrap: wrap;
 }
 
+.hero-portfolio-link {
+  border-color: white;
+  color: white;
+}
+
 /* Features Section */
 .text-center {
   text-align: center;

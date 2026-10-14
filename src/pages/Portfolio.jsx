@@ -67,7 +67,7 @@ const Portfolio = () => {
           <div className="video-grid">
             {videos.map((vid, index) => (
               <div key={vid.id} className={`portfolio-item video-card delay-${(index % 4) * 100}`}>
-                <div className="video-thumb-wrapper" onClick={() => setActiveVideo(vid)} style={{ cursor: 'pointer' }}>
+                <div className="video-thumb-wrapper" onClick={() => setActiveVideo(vid)}>
                   <img src={vid.thumb} alt={vid.title} className="video-thumb" loading="lazy" />
                   <div className="play-button-overlay">
                     <button className="play-btn" aria-label="Play video">

@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Todos os direitos reservados. | CNPJ: 55.555.555/0001-55</p>
+          <p>© 2026 Todos os direitos reservados. | CNPJ: 50.271.963/0001-06</p>
         </div>
       </div>
     </footer>

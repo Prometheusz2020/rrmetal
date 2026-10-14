@@ -20,7 +20,7 @@ const Home = () => {
               <Link to="/contato" className="btn btn-primary">
                 Solicite um Orçamento <ArrowRight size={20} />
               </Link>
-              <Link to="/portfolio" className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
+              <Link to="/portfolio" className="btn btn-outline hero-portfolio-link">
                 Ver Projetos
               </Link>
             </div>
