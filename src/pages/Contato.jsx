@@ -75,7 +75,7 @@ const Contato = () => {
                     </div>
                     <div>
                       <h4 className="font-bold">Endereço</h4>
-                      <p className="text-muted">Mococa, São Paulo - Brasil</p>
+                      <p className="text-muted">Rua João Duva, 120 - Distrito Industrial, São José do Rio Pardo - SP</p>
                     </div>
                   </div>
                   <div className="contact-item">
@@ -102,7 +102,7 @@ const Contato = () => {
               <div>
                 <h2 className="text-2xl font-bold mb-6">Atendimento Direto</h2>
                 <div className="whatsapp-cards">
-                  <a href="#" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5519995476078" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
                     <div className="wa-icon">
                       <MessageCircle size={32} />
                     </div>
@@ -112,13 +112,13 @@ const Contato = () => {
                     </div>
                   </a>
 
-                  <a href="#" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5519992495419" className="whatsapp-card" target="_blank" rel="noopener noreferrer">
                     <div className="wa-icon">
                       <MessageCircle size={32} />
                     </div>
                     <div className="wa-info">
                       <h4>Engenharia / Projetos</h4>
-                      <p>(19) 99547-6078</p>
+                      <p>(19) 99249-5419</p>
                     </div>
                   </a>
                 </div>
@@ -185,7 +185,7 @@ const Contato = () => {
         <div className="map-placeholder">
           <div className="map-overlay">
             <MapPin size={48} className="map-pin-icon" />
-            <h3>Atendemos todo o Brasil a partir de Mococa - SP</h3>
+            <h3>Atendemos todo o Brasil a partir de São José do Rio Pardo - SP</h3>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ const Sobre = () => {
               <h2 className="section-title mb-6">Nossa História</h2>
               <div className="title-underline-left mb-6"></div>
               <p className="text-large mb-4">
-                A RRMETAL nasceu com o propósito de transformar o mercado de estruturas metálicas no Brasil. Localizada estrategicamente em Mococa, São Paulo, nossa empresa atende a clientes em todo o território nacional com excelência e dedicação.
+                A RRMETAL nasceu com o propósito de transformar o mercado de estruturas metálicas no Brasil. Localizada estrategicamente em São José do Rio Pardo, São Paulo, nossa empresa atende a clientes em todo o território nacional com excelência e dedicação.
               </p>
               <p className="text-large mb-4">
                 Somos especialistas na fabricação e montagem de estruturas metálicas para os mais diversos fins: desde galpões industriais até projetos arquitetônicos personalizados. Nosso diferencial está no compromisso inabalável com a qualidade e na capacidade de entregar soluções inovadoras.

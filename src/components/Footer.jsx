@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="contact-list">
               <li>
                 <MapPin size={20} className="contact-icon" />
-                <span>Mococa, São Paulo - Brasil</span>
+                <span>Rua João Duva, 120 - Distrito Industrial, São José do Rio Pardo - SP</span>
               </li>
               <li>
                 <Phone size={20} className="contact-icon" />

@@ -15,7 +15,7 @@ RRMETAL - Soluções em Estruturas Metálicas
 © 2026 Todos os direitos reservados. | CNPJ: 50.271.963/0001-06
 
 (19) 99547-6078 | [EMAIL_ADDRESS]
-Mococa, São Paulo - Brasil  
+Rua João Duva, 120 - Distrito Industrial, São José do Rio Pardo - SP
  nos contatos deixe cards de whatsapp para contato direto tambem e nao esqueca da versão para celular
  por hora coloque imagens da internet pra ajudar a montar um site moderno futuramente voupassar pelo github hospedar na vercel
 ja crie um esboço bem estruturado com estilos separados e componentes bons
