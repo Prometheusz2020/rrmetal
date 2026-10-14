@@ -2,10 +2,38 @@ import { MapPin, Phone, Mail, MessageCircle, Send } from 'lucide-react';
 import './Contato.css';
 
 const Contato = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Prevent default form submission for the demo
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+
+    const form = e.currentTarget;
+    const payload = {
+      name: document.getElementById('name')?.value,
+      email: document.getElementById('email')?.value,
+      phone: document.getElementById('phone')?.value,
+      subject: document.getElementById('subject')?.value,
+      message: document.getElementById('message')?.value,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Erro ao enviar mensagem.');
+      }
+
+      alert(result.message || 'Mensagem enviada com sucesso!');
+      form.reset();
+    } catch (error) {
+      alert(error.message || 'Não foi possível enviar a mensagem.');
+    }
   };
 
   return (
@@ -41,7 +69,7 @@ const Contato = () => {
                     </div>
                     <div>
                       <h4 className="font-bold">Telefone</h4>
-                      <p className="text-muted">(16) 99999-9999</p>
+                      <p className="text-muted">(19) 99547-6078</p>
                     </div>
                   </div>
                   <div className="contact-item">
@@ -65,7 +93,7 @@ const Contato = () => {
                     </div>
                     <div className="wa-info">
                       <h4>Comercial / Orçamentos</h4>
-                      <p>(16) 99999-9999</p>
+                      <p>(19) 99547-6078</p>
                     </div>
                   </a>
 
@@ -75,7 +103,7 @@ const Contato = () => {
                     </div>
                     <div className="wa-info">
                       <h4>Engenharia / Projetos</h4>
-                      <p>(16) 99999-8888</p>
+                      <p>(19) 99547-6078</p>
                     </div>
                   </a>
                 </div>
@@ -98,7 +126,7 @@ const Contato = () => {
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Telefone / WhatsApp</label>
-                    <input type="tel" id="phone" placeholder="(00) 00000-0000" />
+                    <input type="tel" id="phone" placeholder="(19) 99547-6078" />
                   </div>
                 </div>
 
