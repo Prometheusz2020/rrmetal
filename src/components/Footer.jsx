@@ -70,7 +70,7 @@ const Footer = () => {
             <h4 className="footer-subtitle">Redes Sociais</h4>
             <div className="social-icons">
               <a href="#" aria-label="Facebook" className="social-link"><FacebookIcon size={24} /></a>
-              <a href="#" aria-label="Instagram" className="social-link"><InstagramIcon size={24} /></a>
+              <a href="https://www.instagram.com/rrme.tal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-link"><InstagramIcon size={24} /></a>
               <a href="#" aria-label="TikTok" className="social-link"><TikTokIcon size={24} /></a>
               <a href="#" aria-label="LinkedIn" className="social-link"><LinkedinIcon size={24} /></a>
               <a href="#" aria-label="WhatsApp" className="social-link"><MessageCircle size={24} /></a>

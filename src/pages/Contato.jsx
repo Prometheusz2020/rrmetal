@@ -108,7 +108,7 @@ const Contato = () => {
                   <a
                     href={`https://wa.me/5519995476078?text=${encodeURIComponent(commercialMessage)}`}
                     className="whatsapp-card"
-                    target="_blank"
+                    targewh
                     rel="noopener noreferrer"
                   >
                     <div className="wa-icon">

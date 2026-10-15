@@ -32,7 +32,7 @@ const Navbar = () => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo-link">
-          <img src="/logo.jpeg" alt="RRMETAL Logo" className="logo-img" />
+          <img src="/logo_nova.jpeg" alt="RRMETAL Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Nav */}
@@ -56,13 +56,15 @@ const Navbar = () => {
           className="mobile-toggle" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Nav */}
-      <div className={`mobile-nav ${isOpen ? 'open' : ''}`}>
+      <div id="mobile-navigation" className={`mobile-nav ${isOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-list">
           {navLinks.map((link) => (
             <li key={link.name}>

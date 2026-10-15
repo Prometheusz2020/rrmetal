@@ -1,10 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Play, X } from 'lucide-react';
 import './Portfolio.css';
 
 const Portfolio = () => {
   const [activeVideo, setActiveVideo] = useState(null);
+  const [activeImage, setActiveImage] = useState(null);
+
+  useEffect(() => {
+    if (!activeImage && !activeVideo) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveImage(null);
+        setActiveVideo(null);
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeImage, activeVideo]);
 
   const images = [
     { id: 1, src: "/imgs/projeto-1.jpeg", alt: "Estrutura Metálica 1" },
@@ -44,12 +64,17 @@ const Portfolio = () => {
           <div className="portfolio-grid grid md:grid-cols-2 gap-8">
             {images.map((img, index) => (
               <div key={img.id} className={`portfolio-item delay-${(index % 4) * 100}`}>
-                <div className="portfolio-img-wrapper image-card">
+                <button
+                  type="button"
+                  className="portfolio-img-wrapper image-card image-modal-trigger"
+                  onClick={() => setActiveImage(img)}
+                  aria-label={`Ver imagem ampliada: ${img.alt}`}
+                >
                   <img src={img.src} alt={img.alt} loading="lazy" />
                   <div className="portfolio-overlay">
                     <span>Ver Detalhes</span>
                   </div>
-                </div>
+                </button>
               </div>
             ))}
           </div>
@@ -83,6 +108,29 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {activeImage && createPortal(
+        <div className="image-modal-overlay" onClick={() => setActiveImage(null)}>
+          <div
+            className="image-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label={activeImage.alt}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="close-modal-btn image-close-btn"
+              onClick={() => setActiveImage(null)}
+              aria-label="Fechar imagem"
+            >
+              <X size={24} />
+            </button>
+            <img src={activeImage.src} alt={activeImage.alt} className="modal-image" />
+          </div>
+        </div>,
+        document.body
+      )}
 
       {/* Video Modal */}
       {activeVideo && createPortal(
