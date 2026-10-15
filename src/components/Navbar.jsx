@@ -32,7 +32,7 @@ const Navbar = () => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo-link">
-          <img src="/logo_nova.jpeg" alt="RRMETAL Logo" className="logo-img" />
+          <img src="/logo_nova2.png" alt="RRMETAL Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Nav */}
